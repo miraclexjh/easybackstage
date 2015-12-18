@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>head</title>
+<th:block th:fragment="globals">
+	<script type="text/javascript" th:inline="javascript">
+		var Globals = window.Globals || {};
+		Globals.ctx = /*[[${#httpServletRequest.getContextPath() + '/'}]]*/ "/";
+	</script>
+</th:block>
+<th:block th:fragment="easyui">
+	<link rel="Stylesheet" th:href="@{/plugins/jquery-easyui-1.4.4/themes/bootstrap/easyui.css}" />
+	<link rel="Stylesheet" th:href="@{/plugins/jquery-easyui-1.4.4/themes/icon.css}" />
+	<script type="text/javascript" th:src="@{/plugins/jquery-easyui-1.4.4/jquery.easyui.min.js}"></script>
+</th:block>
+<th:block th:fragment="jquery">
+	<script type="text/javascript" th:src="@{/plugins/jquery/jquery-1.11.3.min.js}"></script>
+</th:block>
+<th:block th:fragment="ztree">
+	<link rel="Stylesheet" th:href="@{/plugins/zTree_v3/css/zTreeStyle/zTreeStyle.css}" />
+	<script type="text/javascript" th:src="@{/plugins/zTree_v3/js/jquery.ztree.core-3.5.min.js}"></script>
+</th:block>
+<th:block th:fragment="easyloader">
+	<script type="text/javascript" th:src="@{/plugins/jquery-easyui-1.4.4/easyloader.js}"></script>
+</th:block>
+</head>
+<body>
+</body>
+</html>
